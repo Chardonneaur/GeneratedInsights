@@ -1,0 +1,33 @@
+{
+    "name": "GeneratedInsights",
+    "description": "Automatically surfaces significant traffic changes as insight cards on your Matomo dashboard. Compares the current period to the previous one and highlights meaningful movements in visits, bounce rate, top pages, and referral sources — no configuration needed.",
+    "version": "0.1.0",
+    "theme": false,
+    "require": {
+        "matomo": ">=5.0.0-b1,<6.0.0-b1",
+        "php": ">=8.1.0"
+    },
+    "authors": [
+        {
+            "name": "Ronan Chardonneau",
+            "email": "contact@ronan-chardonneau.fr",
+            "homepage": "https://ronan-chardonneau.fr"
+        }
+    ],
+    "support": {
+        "email": "contact@ronan-chardonneau.fr",
+        "issues": "https://github.com/Chardonneaur/GeneratedInsights/issues",
+        "source": "https://github.com/Chardonneaur/GeneratedInsights"
+    },
+    "homepage": "https://github.com/Chardonneaur/GeneratedInsights",
+    "license": "GPL v3+",
+    "keywords": [
+        "insights",
+        "anomaly detection",
+        "dashboard",
+        "kpi",
+        "trends",
+        "analytics"
+    ],
+    "category": "others"
+}

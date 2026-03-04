@@ -1,0 +1,47 @@
+<div class="generatedInsightsWidget">
+    <style>
+        .generatedInsightsWidget { padding: 12px; }
+        .generatedInsightsWidget .gi-header { margin-bottom: 10px; font-size: 12px; color: #5f6a77; }
+        .generatedInsightsWidget .gi-grid { display: grid; gap: 10px; }
+        .generatedInsightsWidget .gi-card {
+            border: 1px solid #e3e8ef;
+            border-left-width: 5px;
+            border-radius: 8px;
+            background: #fff;
+            padding: 10px 12px;
+        }
+        .generatedInsightsWidget .gi-card-positive { border-left-color: #1f9d55; }
+        .generatedInsightsWidget .gi-card-negative { border-left-color: #d64545; }
+        .generatedInsightsWidget .gi-title { font-size: 13px; font-weight: 600; color: #111827; }
+        .generatedInsightsWidget .gi-summary { margin-top: 4px; font-size: 12px; color: #374151; }
+        .generatedInsightsWidget .gi-delta { margin-top: 6px; font-size: 12px; font-weight: 600; }
+        .generatedInsightsWidget .gi-delta-up { color: #1f9d55; }
+        .generatedInsightsWidget .gi-delta-down { color: #d64545; }
+        .generatedInsightsWidget .gi-empty { color: #6b7280; font-size: 12px; }
+        .generatedInsightsWidget .gi-error { color: #b42318; font-size: 12px; }
+    </style>
+
+    {% if errorMessage %}
+        <div class="gi-error">{{ errorMessage }}</div>
+    {% else %}
+        {% if hasComparison %}
+            <div class="gi-header">
+                {{ 'GeneratedInsights_ComparingLabel'|translate(currentPrettyDate, previousPrettyDate) }}
+            </div>
+        {% endif %}
+
+        {% if insights|length > 0 %}
+            <div class="gi-grid">
+                {% for insight in insights %}
+                    <div class="gi-card gi-card-{{ insight.tone|e('html_attr') }}">
+                        <div class="gi-title">{{ insight.title }}</div>
+                        <div class="gi-summary">{{ insight.summary }}</div>
+                        <div class="gi-delta gi-delta-{{ insight.direction|e('html_attr') }}">{{ insight.delta }}</div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="gi-empty">{{ 'GeneratedInsights_NoInsights'|translate }}</div>
+        {% endif %}
+    {% endif %}
+</div>

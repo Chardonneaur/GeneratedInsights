@@ -1,0 +1,8 @@
+{
+    "GeneratedInsights": {
+        "WidgetTitle": "Generated Insights",
+        "ComparingLabel": "Comparing %1$s to %2$s",
+        "NoInsights": "No significant changes detected for this period.",
+        "ErrorLoadingInsights": "Generated insights are temporarily unavailable."
+    }
+}
