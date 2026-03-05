@@ -1,7 +1,7 @@
 {
     "name": "GeneratedInsights",
     "description": "Automatically surfaces significant traffic changes as insight cards on your Matomo dashboard. Compares the current period to the previous one and highlights meaningful movements in visits, bounce rate, top pages, and referral sources — no configuration needed.",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "theme": false,
     "require": {
         "matomo": ">=5.0.0-b1,<6.0.0-b1",
